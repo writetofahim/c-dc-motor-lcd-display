@@ -1,0 +1,43 @@
+C51 COMPILER V9.60.0.0   DCPROG                                                            01/11/2023 20:50:10 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE DCPROG
+OBJECT MODULE PLACED IN .\Objects\dcprog.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE dcprog.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\dc
+                    -prog.lst) TABS(2) OBJECT(.\Objects\dcprog.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit motor1Pin1=P1^0;
+   3          sbit motor1Pin2=P1^1;
+   4          
+   5          sbit motor2Pin1=P1^2;
+   6          sbit motor2Pin2=P1^3;
+   7          
+   8          void main(){
+   9   1        unsigned int i;
+  10   1        motor1Pin1=motor1Pin2=motor2Pin1=motor2Pin2=0;
+  11   1      
+  12   1        while(1){
+  13   2          motor1Pin1=1;
+  14   2          motor1Pin2=0;
+  15   2          motor2Pin1=0;
+  16   2          motor2Pin2=1;
+  17   2        }
+  18   1      }
+*** WARNING C280 IN LINE 9 OF dcprog.c: 'i': unreferenced local variable
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     18    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
